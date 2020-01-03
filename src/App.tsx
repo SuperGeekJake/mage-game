@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Container from '@material-ui/core/Container';
+import { styled } from '@material-ui/core/styles';
+
+import Router from 'src/Router';
+import { StyleProvider } from './styles';
+import { SessionProvider } from './firebase/session';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyleProvider>
+      <AppContainer>
+        <SessionProvider>
+          <Router />
+        </SessionProvider>
+      </AppContainer>
+    </StyleProvider>
   );
-}
+};
 
 export default App;
+
+const AppContainer = styled(Container)({
+  width: '100%',
+  height: '100%'
+});

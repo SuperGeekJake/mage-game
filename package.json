@@ -2,13 +2,21 @@
   "name": "mage-game",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "@types/jest": "24.0.23",
     "@types/node": "12.12.11",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.4",
+    "@types/react-router-dom": "^5.1.2"
+  },
+  "dependencies": {
+    "@ionic/react": "^4.11.5",
+    "@ionic/react-router": "^4.11.5",
+    "@material-ui/core": "^4.7.1",
+    "firebase": "^7.5.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "typescript": "3.7.2"
   },

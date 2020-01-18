@@ -5,8 +5,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   '@global': {
     'html, body, #root': {
       width: '100%',
-      height: '100%',
-      background: '#ccc'
+      height: '100%'
     }
   }
 }), { name: 'GlobalStyles' });

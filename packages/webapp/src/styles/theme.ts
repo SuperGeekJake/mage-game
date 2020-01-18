@@ -2,7 +2,7 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import yellow from '@material-ui/core/colors/yellow';
 import blue from '@material-ui/core/colors/blue';
 
-// @ts-ignore Incorrect type, object is partial, not complete
+// @ts-ignore Module provides incorrect type, object should be partial
 const theme = createMuiTheme({
   palette: {
     primary: {

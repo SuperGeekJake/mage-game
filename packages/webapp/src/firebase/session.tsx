@@ -11,7 +11,6 @@ type State = LoadingState<Data, Error>
 export const SessionContext = React.createContext<State | null>(null);
 
 export const SessionProvider: React.FC = ({ children }) => {
-  // const [state, dispatch] = React.useReducer(reducer, initState);
   const [state, onNext, onError] = useLoadingState<Data, Error>()
 
   const subscription = React.useRef<firebase.Unsubscribe | null>(null);
@@ -41,7 +40,7 @@ export const ProtectedRoute: React.FC<RouteProps> = ({ component: RouteComponent
       render={
         (routeCompProps) => (error || !data)
           ? <Redirect to='/login' />
-          // @ts-ignore
+          // @ts-ignore TODO: Need to fix
           : <RouteComponent {...routeCompProps} />
       }
     />

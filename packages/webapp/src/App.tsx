@@ -21,6 +21,9 @@ const App: React.FC = () => {
 export default App;
 
 const AppContainer = styled(Container)({
+  display: 'flex',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  paddingTop: '24px',
+  paddingBottom: '24px',
 });

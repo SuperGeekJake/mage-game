@@ -12,8 +12,8 @@ const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <ProtectedRoute exact path='/menu' component={Menu} />
-        <Route exact path='/login' component={Login} />
+        <ProtectedRoute path='/menu' component={Menu} />
+        <Route path='/login' component={Login} />
         <Redirect exact from='/' to='/menu' />
       </Switch>
     </BrowserRouter>

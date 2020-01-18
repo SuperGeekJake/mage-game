@@ -1,0 +1,22 @@
+{
+  "name": "@mage/server",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "ts-node --transpile-only src/index.ts",
+    "watch": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "@mage/engine": "^0.1.0",
+    "boardgame.io": "^0.35.1",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.15",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "@types/koa-static": "^4.0.1",
+    "@types/lodash": "^4.14.149",
+    "ts-node-dev": "^1.0.0-pre.44"
+  }
+}

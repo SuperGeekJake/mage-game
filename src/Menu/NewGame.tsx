@@ -86,7 +86,7 @@ export default function NewGame() {
           <Button variant="contained" size="large" color="primary">Start game</Button>
         </Grid>
         <Grid item>
-          <RouterButton variant="contained" size="large" to="/menu">Quit</RouterButton>
+          <RouterButton variant="contained" size="large" to="/menu">Cancel</RouterButton>
         </Grid>
       </Grid>
     </Grid>

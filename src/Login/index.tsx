@@ -1,5 +1,6 @@
 import * as React from 'react';
-import * as firebase from 'firebase/app'
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 import { styled } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
@@ -9,12 +10,13 @@ import { Container } from 'src/styles';
 import { Redirect } from 'react-router';
 
 const Menu: React.FC = () => {
-  const { error, data } = useSession();
-  const handleSignIn = React.useCallback(() => {
-    const provider = new firebase.auth.GoogleAuthProvider();
+  // TODO: Display error msg on session error
+  const { data } = useSession();
+  const handleSignIn = () => {
     firebase.auth().signInWithPopup(provider);
-  }, []);
-  if (!error && data) return <Redirect to='/menu' />;
+  };
+
+  if (data) return <Redirect to='/menu' />;
   return (
     <Container>
       <Content>
@@ -29,6 +31,8 @@ const Menu: React.FC = () => {
 };
 
 export default Menu;
+
+const provider = new firebase.auth.GoogleAuthProvider();
 
 const Content = styled(Box)({
   textAlign: 'center'

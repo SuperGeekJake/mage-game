@@ -1,0 +1,137 @@
+import { describe, expect, test } from "vitest";
+
+import { getCardValue, getCardSuit } from "./utils";
+
+describe("Utils", () => {
+  test("get the card value", () => {
+    expect(getCardValue(0)).toBe(0);
+    expect(getCardValue(1)).toBe(1);
+    expect(getCardValue(2)).toBe(2);
+    expect(getCardValue(3)).toBe(3);
+    expect(getCardValue(4)).toBe(4);
+    expect(getCardValue(5)).toBe(5);
+    expect(getCardValue(6)).toBe(6);
+    expect(getCardValue(7)).toBe(7);
+    expect(getCardValue(8)).toBe(8);
+    expect(getCardValue(9)).toBe(9);
+    expect(getCardValue(10)).toBe(10);
+    expect(getCardValue(11)).toBe(11);
+    expect(getCardValue(12)).toBe(12);
+    expect(getCardValue(13)).toBe(13);
+    expect(getCardValue(14)).toBe(14);
+
+    expect(getCardValue(15)).toBe(0);
+    expect(getCardValue(16)).toBe(1);
+    expect(getCardValue(17)).toBe(2);
+    expect(getCardValue(18)).toBe(3);
+    expect(getCardValue(19)).toBe(4);
+    expect(getCardValue(20)).toBe(5);
+    expect(getCardValue(21)).toBe(6);
+    expect(getCardValue(22)).toBe(7);
+    expect(getCardValue(23)).toBe(8);
+    expect(getCardValue(24)).toBe(9);
+    expect(getCardValue(25)).toBe(10);
+    expect(getCardValue(26)).toBe(11);
+    expect(getCardValue(27)).toBe(12);
+    expect(getCardValue(28)).toBe(13);
+    expect(getCardValue(29)).toBe(14);
+
+    expect(getCardValue(30)).toBe(0);
+    expect(getCardValue(31)).toBe(1);
+    expect(getCardValue(32)).toBe(2);
+    expect(getCardValue(33)).toBe(3);
+    expect(getCardValue(34)).toBe(4);
+    expect(getCardValue(35)).toBe(5);
+    expect(getCardValue(36)).toBe(6);
+    expect(getCardValue(37)).toBe(7);
+    expect(getCardValue(38)).toBe(8);
+    expect(getCardValue(39)).toBe(9);
+    expect(getCardValue(40)).toBe(10);
+    expect(getCardValue(41)).toBe(11);
+    expect(getCardValue(42)).toBe(12);
+    expect(getCardValue(43)).toBe(13);
+    expect(getCardValue(44)).toBe(14);
+
+    expect(getCardValue(45)).toBe(0);
+    expect(getCardValue(46)).toBe(1);
+    expect(getCardValue(47)).toBe(2);
+    expect(getCardValue(48)).toBe(3);
+    expect(getCardValue(49)).toBe(4);
+    expect(getCardValue(50)).toBe(5);
+    expect(getCardValue(51)).toBe(6);
+    expect(getCardValue(52)).toBe(7);
+    expect(getCardValue(53)).toBe(8);
+    expect(getCardValue(54)).toBe(9);
+    expect(getCardValue(55)).toBe(10);
+    expect(getCardValue(56)).toBe(11);
+    expect(getCardValue(57)).toBe(12);
+    expect(getCardValue(58)).toBe(13);
+    expect(getCardValue(59)).toBe(14);
+  });
+
+  test("get the card suit", () => {
+    expect(getCardSuit(0)).toBe(4);
+    expect(getCardSuit(1)).toBe(0);
+    expect(getCardSuit(2)).toBe(0);
+    expect(getCardSuit(3)).toBe(0);
+    expect(getCardSuit(4)).toBe(0);
+    expect(getCardSuit(5)).toBe(0);
+    expect(getCardSuit(6)).toBe(0);
+    expect(getCardSuit(7)).toBe(0);
+    expect(getCardSuit(8)).toBe(0);
+    expect(getCardSuit(9)).toBe(0);
+    expect(getCardSuit(10)).toBe(0);
+    expect(getCardSuit(11)).toBe(0);
+    expect(getCardSuit(12)).toBe(0);
+    expect(getCardSuit(13)).toBe(0);
+    expect(getCardSuit(14)).toBe(4);
+
+    expect(getCardSuit(15)).toBe(4);
+    expect(getCardSuit(16)).toBe(1);
+    expect(getCardSuit(17)).toBe(1);
+    expect(getCardSuit(18)).toBe(1);
+    expect(getCardSuit(19)).toBe(1);
+    expect(getCardSuit(20)).toBe(1);
+    expect(getCardSuit(21)).toBe(1);
+    expect(getCardSuit(22)).toBe(1);
+    expect(getCardSuit(23)).toBe(1);
+    expect(getCardSuit(24)).toBe(1);
+    expect(getCardSuit(25)).toBe(1);
+    expect(getCardSuit(26)).toBe(1);
+    expect(getCardSuit(27)).toBe(1);
+    expect(getCardSuit(28)).toBe(1);
+    expect(getCardSuit(29)).toBe(4);
+
+    expect(getCardSuit(30)).toBe(4);
+    expect(getCardSuit(31)).toBe(2);
+    expect(getCardSuit(32)).toBe(2);
+    expect(getCardSuit(33)).toBe(2);
+    expect(getCardSuit(34)).toBe(2);
+    expect(getCardSuit(35)).toBe(2);
+    expect(getCardSuit(36)).toBe(2);
+    expect(getCardSuit(37)).toBe(2);
+    expect(getCardSuit(38)).toBe(2);
+    expect(getCardSuit(39)).toBe(2);
+    expect(getCardSuit(40)).toBe(2);
+    expect(getCardSuit(41)).toBe(2);
+    expect(getCardSuit(42)).toBe(2);
+    expect(getCardSuit(43)).toBe(2);
+    expect(getCardSuit(44)).toBe(4);
+
+    expect(getCardSuit(45)).toBe(4);
+    expect(getCardSuit(46)).toBe(3);
+    expect(getCardSuit(47)).toBe(3);
+    expect(getCardSuit(48)).toBe(3);
+    expect(getCardSuit(49)).toBe(3);
+    expect(getCardSuit(50)).toBe(3);
+    expect(getCardSuit(51)).toBe(3);
+    expect(getCardSuit(52)).toBe(3);
+    expect(getCardSuit(53)).toBe(3);
+    expect(getCardSuit(54)).toBe(3);
+    expect(getCardSuit(55)).toBe(3);
+    expect(getCardSuit(56)).toBe(3);
+    expect(getCardSuit(57)).toBe(3);
+    expect(getCardSuit(58)).toBe(3);
+    expect(getCardSuit(59)).toBe(4);
+  });
+});

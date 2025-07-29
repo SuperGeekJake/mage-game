@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts"
+  },
+  "dependencies": {
+    "@auth/core": "^0.40.0",
+    "@auth/drizzle-adapter": "^1.10.0",
+    "@trpc/server": "^11.4.3",
+    "@types/better-sqlite3": "^7.6.13",
+    "drizzle-orm": "^0.44.3",
+    "ws": "^8.18.3",
+    "zod": "^4.0.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/ws": "^8.18.1",
+    "better-sqlite3": "^12.2.0",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.20.3"
+  }
+}

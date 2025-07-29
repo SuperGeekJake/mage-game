@@ -1,16 +1,25 @@
 import { applyWSSHandler } from "@trpc/server/adapters/ws";
 import { WebSocketServer } from "ws";
+import z from "zod";
 
 import { appRouter } from "./trpc/index.js";
 
+const ENV = z
+  .object({
+    PORT: z.coerce.number(),
+  })
+  .parse({
+    PORT: process.env.PORT,
+  });
+
 const wss = new WebSocketServer({
-  port: 3001,
+  port: ENV.PORT,
 });
 
 const handler = applyWSSHandler({ wss, router: appRouter });
 
 wss.on("listening", () => {
-  console.log("WebSocket Server listening on ws://localhost:3001");
+  console.log(`WebSocket Server listening on ws://localhost:${ENV.PORT}`);
 });
 
 process.on("SIGTERM", () => {

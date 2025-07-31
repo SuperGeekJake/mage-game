@@ -2,7 +2,7 @@ import { applyWSSHandler } from "@trpc/server/adapters/ws";
 import { WebSocketServer } from "ws";
 import z from "zod";
 
-import { appRouter } from "./trpc/index.js";
+import { appRouter } from "./routers/_app.js";
 
 const ENV = z
   .object({

@@ -2,12 +2,16 @@ import type { CreateHTTPContextOptions } from "@trpc/server/adapters/standalone"
 import type { CreateWSSContextFnOptions } from "@trpc/server/adapters/ws";
 import type { IncomingHttpHeaders } from "http";
 
+import { auth } from "~/auth/betterAuth.js";
+
 export const createContext = async (
   opts: CreateHTTPContextOptions | CreateWSSContextFnOptions
 ) => {
   const headers = createHeaders(opts.req.headers);
+  const session = await getServerSession(headers);
   return {
     headers,
+    session,
   };
 };
 
@@ -26,4 +30,17 @@ function createHeaders(httpHeaders: IncomingHttpHeaders) {
   }
 
   return headers;
+}
+
+async function getServerSession(headers: Headers) {
+  const data = await auth.api.getSession({
+    headers,
+  });
+
+  return data
+    ? {
+        ...data.session,
+        user: data.user,
+      }
+    : null;
 }

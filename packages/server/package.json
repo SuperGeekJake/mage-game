@@ -3,10 +3,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx src/index.ts",
+    "dev": "tsx --env-file .env src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "tsx src/db/migrate.ts"
+    "db:migrate": "tsx --env-file .env src/db/migrate.ts"
   },
   "dependencies": {
     "@auth/core": "^0.40.0",

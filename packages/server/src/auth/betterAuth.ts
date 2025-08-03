@@ -30,12 +30,12 @@ export const auth = betterAuth({
   }),
   plugins: [
     magicLink({
-      sendMagicLink: async ({ email, token, url }, request) => {
+      sendMagicLink: async ({ email, url }) => {
         await resend.emails.send({
           from: ENV.EMAIL_FROM,
           to: email,
           subject: "Mage Game: Verify Your Email Address",
-          html: `The following link will verify your email address and sign you up to play <em>Mage</em>.\n\n<a href="${url}">${url}</a>`,
+          html: `Click the following link to verify your email address and begin playing <em>Mage</em>.\n\n<a href="${url}">${url}</a>`,
         });
       },
     }),
